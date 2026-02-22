@@ -1,15 +1,10 @@
 export default function Footer() {
   return (
-    <footer className="bg-muted/30 border-t border-border py-6 md:pb-6 pb-52">
+    <footer className="bg-muted/30 border-t border-border py-6 md:pb-6 pb-28">
       <div className="container mx-auto px-4 text-center">
-        <a
-          href="https://www.topsuite.net/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted-foreground text-xl hover:text-primary transition-colors duration-300 inline-block"
-        >
-          تم التصميم والتطوير بواسطة <span className="text-primary font-semibold">Top Suite</span>
-        </a>
+        <p className="text-muted-foreground text-sm">
+          جميع الحقوق محفوظة © Hyde Park Developments 2025
+        </p>
       </div>
     </footer>
   )

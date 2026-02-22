@@ -4,15 +4,15 @@ import Image from "next/image"
 
 export default function BloomfieldsAmenities() {
   const amenities = [
-    "إطلالة بحرية مباشرة",
-    "مارينا عالمية IGY",
-    "إدارة Marriott",
-    "ممشى سياحي 1 كم",
-    "مركز معارض ومؤتمرات",
-    "حمامات سباحة infinity",
-    "مطاعم ومقاهي عالمية",
+    "حدائق ومساحات خضراء",
+    "مرافق خدمية وتجارية",
     "أمن وحراسة 24/7",
-    "تشطيب كامل لجميع الوحدات",
+    "مناطق لعب الأطفال",
+    "مقاهي ومطاعم",
+    "مسارات مشي ودراجات",
+    "نوادي رياضية",
+    "حمامات سباحة",
+    "موقع استراتيجي",
   ]
 
   return (
@@ -27,14 +27,8 @@ export default function BloomfieldsAmenities() {
         </div>
 
         <div className="relative aspect-[16/7] overflow-hidden mb-12 shadow-2xl">
-          <Image
-            src="/images/ilmonte/amenities.webp"
-            alt="مميزات IL Monte Galala"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/30" />
+          <Image src="/images/high6.webp" alt="مميزات Hyde Park Central" fill className="object-cover" sizes="100vw" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border">
@@ -50,9 +44,9 @@ export default function BloomfieldsAmenities() {
 
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {[
-            { title: "موقع استراتيجي", desc: "على جبل الجلالة مباشرة على البحر الأحمر" },
-            { title: "إدارة فندقية", desc: "Marriott International بخدمات عالمية المستوى" },
-            { title: "تشطيب كامل", desc: "جميع الوحدات جاهزة للسكن بتشطيب فاخر" },
+            { title: "موقع استراتيجي", desc: "في قلب التجمع السادس قريب من الطرق الرئيسية" },
+            { title: "تخطيط ذكي", desc: "بتصميمات عصرية ومساحات خضراء كبيرة على 220 فدان" },
+            { title: "راحة وخصوصية", desc: "تجمع بين الراحة والخصوصية مع خدمات متكاملة" },
           ].map((item, i) => (
             <div key={i} className="bg-muted/20 p-8 text-right border-r-4 border-primary">
               <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>

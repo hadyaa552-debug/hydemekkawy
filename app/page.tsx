@@ -25,25 +25,21 @@ export default function Home() {
       <BloomfieldsGallery />
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 lg:py-32 bg-background">
+      <section id="contact" className="py-20 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Info */}
             <div className="text-right">
               <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-3">تواصل معنا</p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">نحن هنا لمساعدتك</h2>
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
-                  <h3 className="font-bold text-foreground mb-2">معلومات الاتصال</h3>
-                  <p className="text-muted-foreground">هاتف</p>
-                  <a href="tel:+201024383203" className="text-primary text-xl font-bold hover:underline">
-                    0102 4383 203
+                  <p className="text-muted-foreground text-sm mb-1">هاتف</p>
+                  <a href="tel:+201019177081" className="text-primary text-2xl font-bold hover:underline">
+                    0101 917 7081
                   </a>
                 </div>
               </div>
             </div>
-
-            {/* Form */}
             <div>
               <h3 className="text-xl font-bold text-foreground mb-6 text-right">سجل اهتمامك</h3>
               <ContactForm />

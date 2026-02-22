@@ -8,12 +8,12 @@ export default function BloomfieldsGallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
 
   const images = [
-    { src: "/images/ilmonte/gallery-main.webp", alt: "منظر جوي لـ IL Monte Galala" },
-    { src: "/images/ilmonte/aerial-sunset.webp", alt: "منظر غروب الشمس" },
-    { src: "/images/ilmonte/villa-1.webp", alt: "فيلا فاخرة بإطلالة بحرية" },
-    { src: "/images/ilmonte/villa-2.webp", alt: "فيلا مع حمام سباحة خاص" },
-    { src: "/images/ilmonte/amenities.webp", alt: "المرافق الفاخرة" },
-    { src: "/images/ilmonte/payment-plan.jpeg", alt: "نظام السداد" },
+    { src: "/images/high1.webp", alt: "Hyde Park Central - المشروع" },
+    { src: "/images/high3.webp", alt: "Hyde Park Central - الكمبوند" },
+    { src: "/images/high3-2.webp", alt: "Hyde Park Central - المساحات الخضراء" },
+    { src: "/images/high4.webp", alt: "Hyde Park Central - توين هاوس" },
+    { src: "/images/high5.webp", alt: "Hyde Park Central - فيلات مستقلة" },
+    { src: "/images/high6.webp", alt: "Hyde Park Central - المشهد العام" },
   ]
 
   return (
@@ -21,38 +21,25 @@ export default function BloomfieldsGallery() {
       <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
         <div className="text-center mb-12">
           <p className="text-primary font-semibold tracking-widest uppercase text-sm mb-3">معرض الصور</p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">اكتشف IL Monte Galala</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">اكتشف Hyde Park Central</h2>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {images.map((img, i) => (
-            <div
-              key={i}
-              className="relative aspect-[4/3] overflow-hidden cursor-pointer group"
-              onClick={() => setSelectedImage(i)}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
+            <div key={i} className="relative aspect-[4/3] overflow-hidden cursor-pointer group"
+              onClick={() => setSelectedImage(i)}>
+              <Image src={img.src} alt={img.alt} fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity font-semibold">
-                  عرض
-                </span>
-              </div>
+                sizes="(max-width: 768px) 50vw, 33vw" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300" />
             </div>
           ))}
         </div>
       </div>
 
       {selectedImage !== null && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}>
           <button className="absolute top-4 left-4 text-white hover:text-primary" onClick={() => setSelectedImage(null)}>
             <X className="w-8 h-8" />
           </button>

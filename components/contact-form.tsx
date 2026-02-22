@@ -2,7 +2,6 @@
 
 import type React from "react"
 import { useState } from "react"
-import { Loader2 } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 export default function ContactForm() {
@@ -21,8 +20,7 @@ export default function ContactForm() {
           name: formData.name,
           phone: formData.phone,
           "نوع الوحدة": formData.unitType || "لم يتم تحديده",
-          _cc: "apkzoz85@gmail.com",
-          _subject: "استفسار جديد - IL Monte Galala",
+          _subject: "استفسار جديد - Hyde Park Central",
           _captcha: "false",
           _template: "table",
         }),
@@ -40,48 +38,26 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div>
-        <select
-          value={formData.unitType}
-          onChange={(e) => setFormData({ ...formData, unitType: e.target.value })}
-          required
-          className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary"
-        >
-          <option value="">نوع الوحدة المهتم بها *</option>
-          <option value="studio">ستوديو</option>
-          <option value="1bed">غرفة نوم</option>
-          <option value="2bed">غرفتين نوم</option>
-          <option value="3bed">3 غرف نوم</option>
-          <option value="loft">لوفت</option>
-          <option value="penthouse">بنتهاوس</option>
-        </select>
-      </div>
-      <div>
-        <input
-          type="text"
-          placeholder="الاسم الكامل *"
-          value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          required
-          className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary placeholder:text-muted-foreground"
-        />
-      </div>
-      <div>
-        <input
-          type="tel"
-          placeholder="رقم الهاتف *"
-          value={formData.phone}
-          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-          required
-          dir="ltr"
-          className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary placeholder:text-muted-foreground"
-        />
-      </div>
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-primary text-white py-4 font-semibold text-base hover:bg-primary/90 transition-colors disabled:opacity-70"
-      >
+      <select value={formData.unitType}
+        onChange={(e) => setFormData({ ...formData, unitType: e.target.value })}
+        required
+        className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary">
+        <option value="">نوع الوحدة المهتم بها *</option>
+        <option value="villa">فيلا مستقلة</option>
+        <option value="twin">توين هاوس</option>
+        <option value="town">تاون هاوس</option>
+        <option value="apartment">شقة سكنية</option>
+      </select>
+      <input type="text" placeholder="الاسم الكامل *"
+        value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        required
+        className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary placeholder:text-muted-foreground" />
+      <input type="tel" placeholder="رقم الهاتف *"
+        value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+        required dir="ltr"
+        className="w-full border border-border bg-background text-foreground px-4 py-3 text-right focus:outline-none focus:border-primary placeholder:text-muted-foreground" />
+      <button type="submit" disabled={loading}
+        className="w-full bg-primary text-white py-4 font-semibold text-base hover:bg-primary/90 transition-colors disabled:opacity-70">
         {loading ? "جاري الإرسال..." : "سجل اهتمامك"}
       </button>
     </form>
