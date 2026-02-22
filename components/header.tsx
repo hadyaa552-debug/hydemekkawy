@@ -7,8 +7,8 @@ import { Phone } from "lucide-react"
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const phoneNumber = "+201019177081"
-  const displayNumber = "0101 917 7081"
+  const phoneNumber = "+201008900076"
+  const displayNumber = "0100 8900 076"
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)

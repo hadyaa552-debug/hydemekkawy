@@ -3,6 +3,9 @@
 import Image from "next/image"
 
 export default function BloomfieldsAmenities() {
+  const phoneNumber = "+201008900076"
+  const whatsappMessage = encodeURIComponent("مرحباً، أنا مهتم بمشروع Hyde Park Central New Cairo وأريد معرفة المزيد من التفاصيل")
+
   const amenities = [
     "حدائق ومساحات خضراء",
     "مرافق خدمية وتجارية",
@@ -31,7 +34,7 @@ export default function BloomfieldsAmenities() {
           <div className="absolute inset-0 bg-black/20" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-border mb-12">
           {amenities.map((amenity, i) => (
             <div key={i} className="p-6 border-b border-l border-border hover:bg-muted/30 transition-colors text-right">
               <div className="flex items-center gap-3 justify-end">
@@ -42,17 +45,23 @@ export default function BloomfieldsAmenities() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          {[
-            { title: "موقع استراتيجي", desc: "في قلب التجمع السادس قريب من الطرق الرئيسية" },
-            { title: "تخطيط ذكي", desc: "بتصميمات عصرية ومساحات خضراء كبيرة على 220 فدان" },
-            { title: "راحة وخصوصية", desc: "تجمع بين الراحة والخصوصية مع خدمات متكاملة" },
-          ].map((item, i) => (
-            <div key={i} className="bg-muted/20 p-8 text-right border-r-4 border-primary">
-              <h3 className="text-lg font-bold text-foreground mb-2">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+        {/* CTA في المميزات */}
+        <div className="bg-muted/30 border border-border p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="text-right">
+            <h3 className="text-2xl font-bold text-foreground mb-2">اكتشف كل مميزات المشروع</h3>
+            <p className="text-muted-foreground">تواصل مع فريق المبيعات للحصول على جولة إرشادية</p>
+          </div>
+          <div className="flex gap-4 flex-shrink-0">
+            <a href={`https://wa.me/${phoneNumber.replace(/[^0-9]/g, "")}?text=${whatsappMessage}`}
+              target="_blank" rel="noopener noreferrer"
+              className="bg-green-500 text-white px-6 py-3 font-semibold hover:bg-green-600 transition-colors whitespace-nowrap">
+              واتساب
+            </a>
+            <a href={`tel:${phoneNumber}`}
+              className="bg-primary text-white px-6 py-3 font-semibold hover:bg-primary/90 transition-colors whitespace-nowrap">
+              اتصل الآن
+            </a>
+          </div>
         </div>
       </div>
     </section>

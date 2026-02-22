@@ -1,5 +1,5 @@
 export default function MobileBottomBar() {
-  const phoneNumber = "+201019177081"
+  const phoneNumber = "+201008900076"
   const whatsappMessage = encodeURIComponent("مرحباً، أنا مهتم بمشروع Hyde Park Central New Cairo. أود الحصول على المزيد من المعلومات.")
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-background border-t border-border shadow-lg">

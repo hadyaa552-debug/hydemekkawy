@@ -13,7 +13,7 @@ export default function ContactForm() {
     e.preventDefault()
     setLoading(true)
     try {
-      const response = await fetch("https://formsubmit.co/ajax/saadh6640@gmail.com", {
+      const response = await fetch("https://formsubmit.co/ajax/Leads@grandeur-spaces.com", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({

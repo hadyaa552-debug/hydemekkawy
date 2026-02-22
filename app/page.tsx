@@ -34,8 +34,8 @@ export default function Home() {
               <div className="space-y-4">
                 <div>
                   <p className="text-muted-foreground text-sm mb-1">هاتف</p>
-                  <a href="tel:+201019177081" className="text-primary text-2xl font-bold hover:underline">
-                    0101 917 7081
+                  <a href="tel:+201008900076" className="text-primary text-2xl font-bold hover:underline">
+                    0100 8900 076
                   </a>
                 </div>
               </div>

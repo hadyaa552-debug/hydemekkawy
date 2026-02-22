@@ -1,7 +1,7 @@
 "use client"
 
 export default function BloomfieldsPayment() {
-  const phoneNumber = "+201019177081"
+  const phoneNumber = "+201008900076"
   const whatsappMessage = encodeURIComponent("مرحباً، أنا مهتم بمشروع Hyde Park Central New Cairo وأريد الاستفسار عن التفاصيل والأسعار")
 
   return (

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
-  const phoneNumber = "+201019177081"
+  const phoneNumber = "+201008900076"
   const whatsappMessage = encodeURIComponent("مرحباً، أنا مهتم بمشروع Hyde Park Central New Cairo وأريد معرفة المزيد من التفاصيل")
 
   useEffect(() => { setIsVisible(true) }, [])
