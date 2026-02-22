@@ -7,7 +7,7 @@ export default function BloomfieldsUnits() {
   const whatsappMessage = encodeURIComponent("مرحباً، أنا مهتم بمشروع Hyde Park Central New Cairo وأريد معرفة المزيد من التفاصيل")
 
   const units = [
-    { type: "فيلات مستقلة", subtype: "Independent Villas", desc: "فيلات مستقلة فاخرة مع حدائق خاصة وتصميمات عصرية توفر الخصوصية والراحة", image: "/images/high5.webp" },
+    { type: "QUAD Villas", subtype: "Independent Villas", desc: "فيلات مستقلة فاخرة مع حدائق خاصة وتصميمات عصرية توفر الخصوصية والراحة", image: "/images/high5.webp" },
     { type: "توين هاوس", subtype: "Twin Houses", desc: "وحدات توين هاوس واسعة بتصميمات مودرن تجمع بين الأناقة والعملية", image: "/images/high4.webp" },
     { type: "تاون هاوس", subtype: "Townhouses", desc: "تاون هاوس عصري بمساحات مريحة وحدائق خاصة لأسلوب حياة متميز", image: "/images/high1.webp" },
     { type: "شقق سكنية", subtype: "Apartments", desc: "شقق سكنية بتصميمات فاخرة توفر الراحة والعملية في قلب الكمبوند", image: "/images/high3.webp" },
